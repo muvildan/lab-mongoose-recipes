@@ -10,7 +10,7 @@ const MONGODB_URI = 'mongodb://localhost:27017/recipe-app';
 // Connection to the database "recipe-app"
 
 const fillWithRecipe = async () => {
-
+    
 mongoose
   .connect(MONGODB_URI, {
     useCreateIndex: true,
@@ -23,6 +23,7 @@ mongoose
   Recipe.deleteMany()
 
   // Iteration 2
+
   try {
     const recipe =
     {
@@ -37,7 +38,7 @@ mongoose
     }
 
     const newRecipe = await Recipe.create(recipe)
-    console.log(recipe);
+    console.log(newRecipe);
 
   }
 
